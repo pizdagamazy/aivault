@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0b10">
+<meta name="description" content="AIVAULT — персональные AI-решения: музыка, изображения, видео, сайты и цифровые задачи.">
+<title>AIVAULT — AI Creative Studio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+:root{--bg:#11110f;--panel:#191916;--muted:#aaa99f;--white:#f3f0e8;--line:rgba(243,240,232,.15);--purple:#d7c7a2;--pink:#e4d9c2;--cyan:#b7b5a8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:'DM Sans',Arial,sans-serif;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:radial-gradient(rgba(255,255,255,.16) .6px,transparent .6px);background-size:5px 5px;z-index:-1}
+a{color:inherit;text-decoration:none}.wrap{width:min(1200px,calc(100% - 56px));margin:auto}.nav{height:90px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.logo{display:flex;gap:13px;align-items:center;font-weight:600;letter-spacing:3px;font-size:13px}.logo-mark{width:32px;height:32px;border:1px solid #c8b994;border-radius:50%;display:grid;place-items:center;color:#d7c7a2;font-size:17px}.navlinks{display:flex;gap:34px;color:#c3c0b7;font-size:11px;letter-spacing:1.2px;text-transform:uppercase}.navlinks a:hover{color:white}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:14px 19px;font-weight:600;font-size:11px;letter-spacing:.5px;transition:.25s;border:1px solid transparent}.nav-cta{background:var(--white);color:#171714}.nav-cta:hover,.btn-primary:hover{transform:translateY(-2px);background:#d7c7a2;color:#111}.hero{padding:105px 0 80px;display:grid;grid-template-columns:1.08fr .92fr;gap:50px;align-items:center;min-height:630px}.eyebrow{display:inline-flex;align-items:center;gap:11px;border-bottom:1px solid #b9a984;padding:0 0 11px;color:#cfc3a7;font-size:9px;letter-spacing:2.2px;text-transform:uppercase}.dot{width:5px;height:5px;background:#cfc3a7;border-radius:50%}.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(49px,6vw,83px);line-height:1.02;letter-spacing:-2.7px;margin:28px 0 25px;font-weight:500}.gradient{background:linear-gradient(105deg,#e7dcc5,#b9aa86);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic}.hero p{font-size:14px;line-height:1.95;color:var(--muted);max-width:480px;margin:0 0 32px}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn-primary{background:var(--white);color:#161613}.btn-secondary{border-color:var(--line);background:transparent;color:#eeeae1}.btn-secondary:hover{border-color:#c8b994;color:#d7c7a2}.micro{margin-top:23px;font-size:9px;letter-spacing:1.5px;color:#858479;text-transform:uppercase}.visual{position:relative;min-height:455px;display:grid;place-items:center;background:linear-gradient(145deg,#292720,#131310);border:1px solid #ffffff10;overflow:hidden}.visual:before{content:"A";position:absolute;font-family:'Playfair Display',serif;font-size:350px;font-style:italic;color:#d7c7a208;line-height:1;transform:translate(3px,-4px)}.orb{position:absolute;width:260px;height:340px;border-radius:48% 48% 46% 46%;background:radial-gradient(ellipse at 32% 22%,#e8dfcb 0,#b7a783 15%,#6e6856 38%,#282720 69%,transparent 72%);filter:drop-shadow(0 0 55px #d7c7a21c);animation:float 8s ease-in-out infinite;transform:rotate(25deg)}.orbit{position:absolute;width:360px;height:135px;border:1px solid #d7c7a267;border-radius:50%;transform:rotate(-42deg)}.orbit.two{transform:rotate(42deg);width:330px;height:170px;border-color:#e6dfce50}.orbit:after{content:"";position:absolute;width:6px;height:6px;border-radius:50%;background:#e6dcc5;top:18px;left:70px}.float-card{position:absolute;z-index:2;background:rgba(22,22,18,.91);border:1px solid #ffffff20;backdrop-filter:blur(18px);padding:14px 15px;box-shadow:0 20px 70px #0005}.float-card .small{font-size:8px;color:#b5ad9a;letter-spacing:1.4px}.float-card strong{display:block;font-family:'Playfair Display',serif;font-size:16px;font-weight:500;margin-top:7px}.card-a{left:16px;top:62px}.card-b{right:15px;top:155px}.card-c{left:28px;bottom:42px}.mini-icon{display:inline-grid;place-items:center;width:27px;height:27px;border:1px solid #c8b994;color:#d7c7a2;margin-right:8px}.spark{position:absolute;color:#e0d3b6;font-size:20px}.s1{top:32px;right:42px}.s2{bottom:35px;right:43px;color:#b7b5a8}.section{padding:88px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:38px}.kicker{font-size:9px;letter-spacing:2.6px;text-transform:uppercase;color:#c6b68f}.section h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(36px,4.3vw,55px);line-height:1.12;letter-spacing:-1.5px;margin:15px 0 0;font-weight:500}.section-head p{color:var(--muted);line-height:1.9;max-width:360px;font-size:12px;margin:0}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.service{position:relative;overflow:hidden;min-height:240px;padding:28px;background:#151512;transition:.3s}.service:hover{background:#202019}.service:after{content:"";position:absolute;width:110px;height:110px;right:-70px;bottom:-80px;background:var(--glow,#d7c7a2);filter:blur(65px);opacity:.1}.service-icon{width:42px;height:42px;border:1px solid #ffffff20;display:grid;place-items:center;font-size:19px;color:#d7c7a2;margin-bottom:27px}.service h3{font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:500;margin:0 0 11px;letter-spacing:-.3px}.service p{font-size:11px;line-height:1.9;color:var(--muted);margin:0;max-width:300px}.service .arrow{position:absolute;right:22px;top:22px;color:#8d897d;font-size:16px}.process{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.step{padding:25px 0;border-top:1px solid #a99770;background:transparent;border-radius:0}.step-num{font-size:9px;color:#c6b68f;letter-spacing:2px}.step h3{font-family:'Playfair Display',Georgia,serif;font-size:21px;font-weight:500;margin:20px 0 10px}.step p{font-size:11px;line-height:1.9;color:var(--muted);margin:0}.contact-box{position:relative;overflow:hidden;border:1px solid #ffffff20;padding:58px;background:linear-gradient(120deg,#1c1b16,#12120f);display:flex;align-items:center;justify-content:space-between;gap:30px}.contact-box:after{content:"A";position:absolute;right:23%;bottom:-150px;font-family:'Playfair Display',serif;font-style:italic;font-size:360px;color:#d7c7a208;pointer-events:none}.contact-box h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(36px,4vw,55px);letter-spacing:-1.5px;line-height:1.1;margin:0 0 17px;max-width:600px;font-weight:500}.contact-box p{color:var(--muted);font-size:12px;line-height:1.9;margin:0;max-width:510px}.contact-actions{position:relative;z-index:1;min-width:190px}.contact-actions .btn{width:100%;margin-bottom:10px}.footer{padding:32px 0 40px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;color:#858479;font-size:10px;letter-spacing:.5px}.footer strong{color:#ded9cc}.footer a:last-child{color:#c6b68f}.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s,transform .65s}.reveal.visible{opacity:1;transform:none}
+@keyframes float{0%,100%{translate:0 0;rotate:-5deg}50%{translate:0 -12px;rotate:4deg}}
+
+/* Portfolio and reviews */
+.portfolio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.project{border:1px solid var(--line);background:#151512;overflow:hidden;transition:.3s}
+.project:hover{border-color:#c6b68f88;transform:translateY(-3px)}
+.project-art{position:relative;min-height:250px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#22211c}
+.project-art .art-label{position:absolute;left:18px;top:16px;font-size:8px;letter-spacing:2px;color:#e4dac5;text-transform:uppercase;z-index:3}
+.project-art .art-index{position:absolute;right:18px;bottom:15px;font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:#e4dac5;z-index:3}
+.art-fashion{background:linear-gradient(140deg,#28251e,#77705e 48%,#161612)}
+.art-fashion:before{content:"";position:absolute;width:150px;height:205px;background:linear-gradient(110deg,#d5c8ac,#74664d 45%,#25231d);clip-path:polygon(30% 0,70% 0,100% 25%,82% 42%,74% 100%,26% 100%,18% 42%,0 25%);filter:drop-shadow(0 20px 20px #0008);transform:rotate(-7deg)}
+.art-fashion:after{content:"FORM / 01";position:absolute;font-family:'Playfair Display',serif;font-size:clamp(27px,4vw,50px);font-style:italic;color:#f0e7d5;letter-spacing:-1px;bottom:28px;left:24px;mix-blend-mode:screen}
+.art-campaign{background:radial-gradient(ellipse at 50% 42%,#d4c6a8 0,#756a52 24%,#25231d 65%,#11110f 100%)}
+.art-campaign:before{content:"";position:absolute;width:145px;height:145px;border-radius:50%;border:1px solid #e5d9c0;box-shadow:0 0 0 18px #e5d9c00b,0 0 0 38px #e5d9c00b,0 0 65px #d7c7a233}
+.art-campaign:after{content:"OBJECTS OF DESIRE";position:absolute;font-size:9px;letter-spacing:3px;color:#f1e7d1;bottom:28px}
+.art-film{background:linear-gradient(120deg,#1b2928,#52645b 48%,#161a17)}
+.art-film:before{content:"";position:absolute;width:170px;height:220px;border-radius:48% 48% 8% 8%;background:linear-gradient(130deg,#d2d1bb,#777f6c 42%,#242e29);clip-path:polygon(35% 0,65% 0,88% 25%,100% 100%,0 100%,12% 25%);filter:drop-shadow(0 20px 25px #0008)}
+.art-film:after{content:"A MOMENT IN MOTION";position:absolute;bottom:27px;left:20px;font-size:9px;letter-spacing:2px;color:#e9e9d9}
+.art-web{background:#e5dfd1;color:#22221c}
+.browser{position:relative;width:74%;height:180px;background:#f5f0e5;border:1px solid #c3b9a5;box-shadow:0 18px 35px #0004;padding:22px 15px 12px}
+.browser:before{content:"";position:absolute;top:9px;left:10px;width:4px;height:4px;border-radius:50%;background:#998f7b;box-shadow:9px 0 #b7aa92,18px 0 #d2c5ad}
+.browser .line{height:4px;background:#b9ad97;width:45%;margin-bottom:8px}
+.browser .bigline{font-family:'Playfair Display',serif;font-size:22px;line-height:1.05;margin:18px 0 10px}
+.browser .pill{height:17px;width:55px;background:#282820;margin-top:12px}
+.art-web .art-label,.art-web .art-index{color:#4a473d}
+.art-abstract{background:linear-gradient(135deg,#29231e,#131311)}
+.art-abstract:before{content:"";position:absolute;width:180px;height:180px;border-radius:48% 52% 60% 40%;background:linear-gradient(135deg,#e4d6b9,#8d7958 48%,#343025);transform:rotate(-30deg);box-shadow:22px 22px 0 #b9a77a22,-20px -15px 0 #eee4ce12}
+.art-abstract:after{content:"SYNTHETIC WORLDS";position:absolute;bottom:25px;font-family:'Playfair Display',serif;font-size:19px;font-style:italic;color:#eee4ce}
+.art-workflow{background:linear-gradient(145deg,#20211e,#11110f)}
+.nodes{display:flex;align-items:center;gap:7px}
+.nodes span{display:grid;place-items:center;width:54px;height:54px;border:1px solid #b8aa87;color:#e0d4bb;font-size:9px;background:#25251f}
+.nodes i{width:15px;height:1px;background:#b8aa87}
+.project-info{padding:20px 22px 23px}
+.project-type{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#c6b68f}
+.project-info h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:500;margin:10px 0}
+.project-info p{font-size:11px;line-height:1.85;color:var(--muted);margin:0}
+.demo-note{border:1px solid #6d6044;background:#29251c;color:#d9c9a5;padding:13px 15px;font-size:10px;line-height:1.7;margin-bottom:22px}
+.reviews-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:35px;align-items:start}
+.review-summary{border:1px solid var(--line);padding:28px;background:#171713;position:sticky;top:20px}
+.review-score{font-family:'Playfair Display',serif;font-size:58px;line-height:1;margin:14px 0 7px;color:#e4d6b9}
+.stars{color:#d5bd83;letter-spacing:3px;font-size:14px}
+.review-summary p{font-size:11px;color:var(--muted);line-height:1.8}
+.review-form{display:grid;gap:12px;margin-top:22px}
+.review-form label{font-size:10px;color:#d4cbb7;letter-spacing:.5px}
+.review-form input,.review-form textarea,.review-form select{width:100%;margin-top:7px;padding:12px 13px;background:#10100e;border:1px solid #ffffff22;color:#f3f0e8;font:inherit;font-size:12px;border-radius:0;outline:none}
+.review-form input:focus,.review-form textarea:focus,.review-form select:focus{border-color:#c6b68f}
+.review-form textarea{min-height:100px;resize:vertical}
+.review-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.review-card{border:1px solid var(--line);background:#151512;padding:19px;min-height:155px}
+.review-card .review-stars{font-size:11px;color:#d5bd83;letter-spacing:2px}
+.review-card p{font-size:11px;line-height:1.8;color:#d2d0c7;margin:12px 0}
+.review-card .reviewer{font-size:9px;letter-spacing:.8px;color:#a9a597}
+.review-card.demo{border-style:dashed}
+.review-card.demo .reviewer:after{content:" · ДЕМО-ПРИМЕР";color:#c6b68f}
+@media(max-width:850px){.portfolio-grid{grid-template-columns:1fr 1fr}.reviews-layout{grid-template-columns:1fr}.review-summary{position:static}.review-list{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.portfolio-grid,.review-list{grid-template-columns:1fr}.project-art{min-height:230px}.review-summary{padding:22px}.navlinks{display:none}}
+
+@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:75px;gap:25px}.hero-copy{text-align:center}.hero p{margin-left:auto;margin-right:auto}.actions{justify-content:center}.visual{min-height:400px}.services{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column;gap:14px}.contact-box{padding:38px;flex-direction:column;align-items:flex-start}.contact-actions{width:100%;max-width:300px}.navlinks{display:none}}
+@media(max-width:560px){.wrap{width:calc(100% - 30px)}.nav{height:74px}.nav-cta{padding:11px 12px;font-size:9px}.logo{letter-spacing:2px;font-size:11px}.hero{padding:58px 0 40px}.hero h1{letter-spacing:-1.5px;font-size:48px}.hero p{font-size:13px}.visual{min-height:330px}.orb{width:210px;height:275px}.orbit{width:300px}.card-a{left:8px;top:38px}.card-b{right:8px;top:110px}.card-c{left:10px;bottom:25px}.services,.process{grid-template-columns:1fr}.service{min-height:205px}.section{padding:58px 0}.section h2{letter-spacing:-1px}.contact-box{padding:29px 22px}.footer{gap:15px;flex-direction:column;align-items:flex-start}}
+</style>
+<script src="./aivault-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<header class="wrap nav">
+  <a class="logo" href="#home"><span class="logo-mark">✳</span><span>AIVAULT<span style="color:#b7a6f8">.</span></span></a>
+  <nav class="navlinks"><a href="#services">Услуги</a><a href="#portfolio">Портфолио</a><a href="#reviews">Отзывы</a><a href="#process">Как работаем</a></nav>
+  <a class="nav-cta" href="https://t.me/AIVAULTII" target="_blank" rel="noreferrer">Обсудить проект ↗</a>
+</header>
+<main>
+<section class="wrap hero" id="home">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="dot"></span> AI CREATIVE PARTNER · EST. FOR YOUR IDEAS</div>
+    <h1>Идеи обретают<br>форму <span class="gradient">без границ</span></h1>
+    <p>Персональные AI-решения для смелых идей. От музыки и визуальных историй до сайтов и цифровых проектов — с вниманием к каждой детали.</p>
+    <div class="actions"><a class="btn btn-primary" href="https://t.me/AIVAULTII" target="_blank" rel="noreferrer">✦ Написать в Telegram <span>↗</span></a><a class="btn btn-secondary" href="#services">Посмотреть возможности ↓</a></div>
+    <div class="micro">ИНДИВИДУАЛЬНЫЙ ПОДХОД · DIGITAL CRAFT · ПРЯМОЙ КОНТАКТ</div>
+  </div>
+  <div class="visual" aria-label="Абстрактная иллюстрация цифровой сферы">
+    <div class="orbit"></div><div class="orbit two"></div><div class="orb"></div>
+    <div class="float-card card-a"><span class="mini-icon">♫</span><span class="small">ЗВУК И ЭМОЦИИ</span><strong>Трек под ключ</strong></div>
+    <div class="float-card card-b"><span class="mini-icon">✧</span><span class="small">ИДЕЯ → ВИЗУАЛ</span><strong>AI-фотографии</strong></div>
+    <div class="float-card card-c"><span class="mini-icon">⌘</span><span class="small">ОТ МЫСЛИ ДО ЗАПУСКА</span><strong>Сайт под задачу</strong></div>
+    <span class="spark s1">✦</span><span class="spark s2">✧</span>
+  </div>
+</section>
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head reveal"><div><div class="kicker">ЧЕМ МОГУ ПОМОЧЬ</div><h2>Технологии.<br><span class="gradient">Твоя эстетика.</span></h2></div><p>От первой задумки до готового результата. Подбираю инструменты и собираю решение под конкретную задачу.</p></div>
+    <div class="services">
+      <article class="service reveal" style="--glow:#a78bfa"><span class="arrow">↗</span><div class="service-icon">♫</div><h3>Музыка под ключ</h3><p>Авторский трек от концепции и текста до инструментала и AI-вокала. Целостное звучание под твоё настроение.</p></article>
+      <article class="service reveal" style="--glow:#f0abfc"><span class="arrow">↗</span><div class="service-icon">✧</div><h3>Генерация изображений</h3><p>Фотореалистичные кадры, кампейны, обложки и визуальные концепции с продуманной эстетикой.</p></article>
+      <article class="service reveal" style="--glow:#7dd3fc"><span class="arrow">↗</span><div class="service-icon">▶</div><h3>Видео и анимация</h3><p>Короткий метр, динамичные ролики, клипы и рекламные истории — когда статичного кадра недостаточно.</p></article>
+      <article class="service reveal" style="--glow:#fbbf24"><span class="arrow">↗</span><div class="service-icon">⌘</div><h3>Создание сайтов</h3><p>Выразительные лендинги и цифровые пространства для личного бренда, продукта или бизнеса.</p></article>
+      <article class="service reveal" style="--glow:#34d399"><span class="arrow">↗</span><div class="service-icon">✳</div><h3>AI-помощь и задачи</h3><p>Поиск решений, работа с AI-инструментами, автоматизация рутины и помощь с нестандартными задачами.</p></article>
+      <article class="service reveal" style="--glow:#fb7185"><span class="arrow">↗</span><div class="service-icon">∞</div><h3>Подписки и инструменты</h3><p>Подбор и настройка AI-сервисов и подписок под твои цели, сценарии работы и доступные варианты.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="portfolio">
+  <div class="wrap">
+    <div class="section-head reveal"><div><div class="kicker">SELECTED CONCEPTS</div><h2>Портфолио.<br><span class="gradient">Возможности в деталях.</span></h2></div><p>Подборка концептуальных AI-проектов, показывающих направление и визуальный подход. Это демонстрационные концепты, а не клиентские кейсы.</p></div>
+    <div class="demo-note reveal"><strong>Концептуальные работы.</strong> Эти примеры созданы для демонстрации возможностей AIVAULT. По мере появления реальных проектов их можно заменить готовыми работами и результатами.</div>
+    <div class="portfolio-grid" id="portfolioGrid">
+      <article class="project reveal"><div class="project-art art-fashion"><span class="art-label">AI IMAGE · FASHION</span><span class="art-index">01 / 06</span></div><div class="project-info"><div class="project-type">AI-визуал · Кампейн</div><h3>Fashion Editorial</h3><p>Концепция визуальной кампании для премиального бренда: фактура, свет, настроение и единый художественный язык.</p></div></article>
+      <article class="project reveal"><div class="project-art art-campaign"><span class="art-label">GENERATIVE ART</span><span class="art-index">02 / 06</span></div><div class="project-info"><div class="project-type">Генерация изображений</div><h3>Objects of Desire</h3><p>Арт-направление для предметной съёмки и рекламных изображений с акцентом на форму и свет.</p></div></article>
+      <article class="project reveal"><div class="project-art art-film"><span class="art-label">AI VIDEO · MOOD FILM</span><span class="art-index">03 / 06</span></div><div class="project-info"><div class="project-type">Видео · Визуальная история</div><h3>A Moment in Motion</h3><p>Идея короткого атмосферного ролика: кинематографичный кадр, движение камеры и заданное настроение.</p></div></article>
+      <article class="project reveal"><div class="project-art art-web"><span class="art-label">WEB DESIGN · CONCEPT</span><span class="art-index">04 / 06</span><div class="browser"><div class="line"></div><div class="bigline">Less, but<br>better.</div><div class="line" style="width:70%"></div><div class="pill"></div></div></div><div class="project-info"><div class="project-type">Сайты · Цифровой дизайн</div><h3>Quiet Luxury Website</h3><p>Концепт сайта для дизайнерского бренда: чистая сетка, выразительная типографика и фокус на продукте.</p></div></article>
+      <article class="project reveal"><div class="project-art art-abstract"><span class="art-label">AI ART DIRECTION</span><span class="art-index">05 / 06</span></div><div class="project-info"><div class="project-type">Креатив · Арт-дирекшн</div><h3>Synthetic Worlds</h3><p>Поиск визуального языка для обложек, цифровых кампаний и проектов, которым нужен свой характер.</p></div></article>
+      <article class="project reveal"><div class="project-art art-workflow"><span class="art-label">AI WORKFLOW · CONCEPT</span><span class="art-index">06 / 06</span><div class="nodes"><span>IDEA</span><i></i><span>AI</span><i></i><span>RESULT</span></div></div><div class="project-info"><div class="project-type">AI-задачи · Workflow</div><h3>From Idea to Output</h3><p>Пример того, как можно выстроить процесс: уточнить задачу, выбрать подходящие инструменты и прийти к нужному результату.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="section-head reveal"><div><div class="kicker">ВСЁ ПРОСТО</div><h2>Твоя идея.<br><span class="gradient">Мой фокус.</span></h2></div><p>Не обязательно приходить с готовым техническим заданием. Достаточно идеи или даже примера того, что тебе нравится.</p></div>
+    <div class="process">
+      <article class="step reveal"><div class="step-num">ШАГ 01 / ОБСУЖДАЕМ</div><h3>Рассказываешь идею</h3><p>Что хочешь получить, для чего это нужно и какой результат представляешь.</p></article>
+      <article class="step reveal"><div class="step-num">ШАГ 02 / ПОДБИРАЕМ</div><h3>Находим решение</h3><p>Обсуждаем подход, возможности, сроки и детали в личных сообщениях.</p></article>
+      <article class="step reveal"><div class="step-num">ШАГ 03 / СОЗДАЁМ</div><h3>Воплощаем задумку</h3><p>Двигаемся к результату и согласовываем важные моменты по ходу работы.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="reviews">
+  <div class="wrap">
+    <div class="section-head reveal"><div><div class="kicker">FEEDBACK</div><h2>Слова имеют<br><span class="gradient">значение.</span></h2></div><p>Здесь будут отзывы людей, которые уже работали с AIVAULT. Можно оставить отзыв через форму и отправить его напрямую в Telegram.</p></div>
+    <div class="reviews-layout">
+      <aside class="review-summary reveal">
+        <div class="kicker">ТВОЁ МНЕНИЕ ВАЖНО</div>
+        <div class="review-score">✳</div>
+        <div class="stars">★★★★★</div>
+        <p>Уже работали вместе? Поделись впечатлением — отзыв поможет другим понять, чего ожидать от сотрудничества.</p>
+        <form class="review-form" id="reviewForm">
+          <label>Как к тебе обращаться<input id="reviewName" name="name" maxlength="60" placeholder="Имя или ник" required></label>
+          <label>Оценка<select id="reviewRating" name="rating" required><option value="5">5 — Отлично</option><option value="4">4 — Хорошо</option><option value="3">3 — Нормально</option><option value="2">2 — Есть замечания</option><option value="1">1 — Не понравилось</option></select></label>
+          <label>Твой отзыв<textarea id="reviewText" name="review" maxlength="1000" placeholder="Расскажи о своём опыте..." required></textarea></label>
+          <button class="btn btn-primary" type="submit">Отправить отзыв ↗</button>
+          <div id="reviewHelp" style="font-size:10px;line-height:1.7;color:#aaa99f">После нажатия отзыв будет подготовлен и скопирован, а Telegram откроется для отправки сообщения.</div>
+        </form>
+      </aside>
+      <div class="review-list" id="reviewList"><p class="muted">Загрузка отзывов…</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="contact-box reveal">
+      <div><div class="kicker">ЕСТЬ ИДЕЯ?</div><h2>Создадим то,<br><span class="gradient">чего ещё нет</span></h2><p>Расскажи, что хочешь создать. Обсудим задачу, возможности и детали лично в Telegram. Каждый проект начинается с диалога.</p></div>
+      <div class="contact-actions"><a class="btn btn-primary" href="https://t.me/AIVAULTII" target="_blank" rel="noreferrer">Написать в Telegram ↗</a><a class="btn btn-secondary" href="https://t.me/AIVAULTII" target="_blank" rel="noreferrer">Задать вопрос</a></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="wrap footer"><a class="logo" href="#home"><span class="logo-mark">✳</span><strong>AIVAULT.</strong></a><span>AIVAULT — идеи заслуживают воплощения.</span><a href="https://t.me/AIVAULTII" target="_blank" rel="noreferrer">Telegram ↗</a></footer>
+<script>
+const observer = new IntersectionObserver(entries => entries.forEach(entry => {if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+
+<script>
+(async function(){
+  const cfg = window.AIVAULT_CONFIG || {};
+  if (!cfg.url || !cfg.anonKey || !window.supabase) return;
+  const db = window.supabase.createClient(cfg.url, cfg.anonKey);
+  const escapeHtml = s => String(s ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const grid = document.getElementById('portfolioGrid');
+  const reviews = document.getElementById('reviewList');
+  try {
+    const {data, error} = await db.from('portfolio').select('id,title,category,description,image_url').eq('published',true).order('created_at',{ascending:false});
+    if (!error && data && data.length) {
+      grid.innerHTML = data.map((p,i)=>`<article class="project reveal"><div class="project-art" style="min-height:240px;background:#17171d;overflow:hidden;position:relative">${p.image_url?`<img src="${escapeHtml(p.image_url)}" alt="${escapeHtml(p.title)}" loading="lazy" style="width:100%;height:260px;object-fit:cover;display:block">`:`<div style="height:240px;display:grid;place-items:center;color:#b7a6f8;font-size:42px">✳</div>`}<span class="art-label" style="position:absolute;left:15px;top:15px">${escapeHtml(p.category||'AIVAULT PROJECT')}</span><span class="art-index" style="position:absolute;right:15px;top:15px">${String(i+1).padStart(2,'0')} / ${String(data.length).padStart(2,'0')}</span></div><div class="project-info"><div class="project-type">${escapeHtml(p.category||'AI-проект')}</div><h3>${escapeHtml(p.title)}</h3><p>${escapeHtml(p.description||'')}</p></div></article>`).join('');
+      document.querySelectorAll('#portfolioGrid .reveal').forEach(el=>observer.observe(el));
+    }
+  } catch(e) {}
+  try {
+    const {data, error} = await db.from('reviews').select('id,name,rating,body').eq('status','approved').order('created_at',{ascending:false});
+    if (!error && data) {
+      reviews.innerHTML = data.map(r=>`<article class="review-card"><div class="review-stars" aria-label="${Number(r.rating)} из 5 звёзд">${'★'.repeat(Number(r.rating))}${'☆'.repeat(5-Number(r.rating))}</div><p>${escapeHtml(r.body)}</p><div class="reviewer">${escapeHtml(r.name)}</div></article>`).join('') || '<p class="muted">Пока нет опубликованных отзывов. Будь первым, кто поделится впечатлением.</p>';
+    }
+  } catch(e) {}
+  document.getElementById('reviewForm').addEventListener('submit', async function(event){
+    event.preventDefault();
+    const name=document.getElementById('reviewName').value.trim();
+    const rating=Number(document.getElementById('reviewRating').value);
+    const body=document.getElementById('reviewText').value.trim();
+    const help=document.getElementById('reviewHelp');
+    if(!name||!body)return;
+    try {
+      const {error}=await db.from('reviews').insert({name,rating,body,status:'pending'});
+      if(error) throw error;
+      help.textContent='Спасибо! Отзыв отправлен на проверку и появится после одобрения владельцем.';
+      this.reset();
+    } catch(e) {
+      help.textContent='Не удалось отправить отзыв. Проверьте подключение сайта к базе данных.';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
