@@ -2,6 +2,6 @@
 // Replace the placeholders with values from Supabase Project Settings -> API.
 // Use ONLY the anon/public key. Never put service_role here.
 window.AIVAULT_CONFIG = {
-  url: "PASTE_SUPABASE_PROJECT_URL_HERE",
-  anonKey: "PASTE_SUPABASE_ANON_PUBLIC_KEY_HERE"
+  url: "sb_publishable_iG-oHa6o4StrycaH2fkXiA_UZK1lAM1",
+  anonKey: "sb_secret_hXPcBimEYaDBZub5dlabOw_HrMrcd-5"
 };
